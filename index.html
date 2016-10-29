@@ -1,8 +1,8 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
   	<!-- blueee -->
-		<title>failure</title>
+		<title>My website</title>
 		<meta charset="UTF">
 		<style>
 			body { 
@@ -12,26 +12,60 @@
 
 		</style>
 		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<script>
+			$('document').ready(function(){
+	$('input[type="text"], input[type="email"], textarea').focus(function(){
+		var background = $(this).attr('id');
+		$('#' + background + '-form').addClass('formgroup-active');
+		$('#' + background + '-form').removeClass('formgroup-error');
+	});
+	$('input[type="text"], input[type="email"], textarea').blur(function(){
+		var background = $(this).attr('id');
+		$('#' + background + '-form').removeClass('formgroup-active');
+	});
+
+function errorfield(field){
+	$(field).addClass('formgroup-error');
+	console.log(field);	
+}
+
+$("#waterform").submit(function() {
+	var stopsubmit = false;
+
+if($('#name').val() == "") {
+	errorfield('#name-form');
+	stopsubmit=true;
+}
+if($('#email').val() == "") {
+	errorfield('#email-form');
+	stopsubmit=true;
+}
+  if(stopsubmit) return false;
+});
+		
+});
+			
+		</script>
   </head>
   <body>
 
 		<header>
  	 	<ul class="topnav" id="myTopnav">
-  <li><a href="#home">Home</a></li>
+  <li><a href="index.html">Home</a></li>
   <li><a href="#Mermaids">Mermaids</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a href="pages/contact.html">Contact</a></li>
   <li><a href="#about">About</a></li>
   <li class="icon">
     <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
   </li>
 </ul>
 		</header>
-		<h1>Mythical Creatures</h1> 
+		<h1>Fuck thissss</h1> 
 		<img src= "">
 		<h3>Theres not much here</h3>
 		<!-- <img src="./images/"> -->
 		<!--img path goes after image/-->
-		<div style="color: pink">
+		<div style="color: #BC07DF">
   <h3>This is a heading</h3>
   <p>This is a paragraph.</p>
 </div>
