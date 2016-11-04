@@ -26,17 +26,10 @@ a:hover:not(.active) {
 background-color:#4CAF50;
 }
 
-#contortion {
+#aerial {
   border: 3px solid black 
 }
 
-body{
-    background-color: red
+body {
+    background-color: yellow
 }
-
-
-
-
-
-
-
